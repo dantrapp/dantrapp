@@ -1,0 +1,207 @@
+{
+  "baseline_revision": "8e7a1ac4eb835a274fb32b2851e6db719fd10c7f",
+  "candidate_revision": "dd22bc4077128362a260a469bbea86f4ce173ed6",
+  "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
+  "cpu": "Apple M4",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.4.4.1)\nTarget: arm64-apple-darwin24.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+  "build": "Meson release, -O3, default_library=both, enable_docs=false, enable_checkasm=true; ninja -j2",
+  "method": "One warmup per build, seven timed runs per build, alternating order, sequential processes; median wall time",
+  "fixture": "Upstream five-frame 1920x1080 YUV420p8 pair repeated twenty times (100 frames)",
+  "reference_sha256": "34d1e2624fc5cd6f1834a86d596c8e8a81b5913905705cabe2bdeee21689945e",
+  "distorted_sha256": "6ea23eb44a227af57f2bf9e9fc49639d7c4882ad689993ca656fc8944c17913e",
+  "timing_scope": "CLI startup, file reads, feature extraction, prediction for full-model cases, JSON output; warm filesystem cache; no decoding",
+  "limitations": "One repeated short sequence on one Apple M4; background load not controlled; JSON comparisons use reported precision",
+  "cases": [
+    {
+      "mode": "full",
+      "threads": 1,
+      "seconds": {
+        "baseline": [
+          3.673731124959886,
+          3.3809752077795565,
+          3.4415796669200063,
+          3.308090209029615,
+          3.3944669156335294,
+          3.2631065831519663,
+          3.491073084063828
+        ],
+        "candidate": [
+          1.550694250036031,
+          1.6762733748182654,
+          1.6260542497038841,
+          1.473117541987449,
+          1.4815464583225548,
+          1.3506867499090731,
+          1.3816880001686513
+        ]
+      },
+      "median_seconds": {
+        "baseline": 3.3944669156335294,
+        "candidate": 1.4815464583225548
+      },
+      "speedup": 2.291164679018458,
+      "wall_time_reduction_percent": 56.35407576078717,
+      "reported_outputs_identical": true
+    },
+    {
+      "mode": "full",
+      "threads": 2,
+      "seconds": {
+        "baseline": [
+          1.723235041834414,
+          1.6837680423632264,
+          2.416550791822374,
+          2.310809708200395,
+          1.9204856660217047,
+          1.8051261249929667,
+          1.9895665002986789
+        ],
+        "candidate": [
+          0.753740250132978,
+          0.7787014581263065,
+          0.7650354998186231,
+          0.9222714998759329,
+          0.8359245420433581,
+          0.7470340421423316,
+          0.7516796248964965
+        ]
+      },
+      "median_seconds": {
+        "baseline": 1.9204856660217047,
+        "candidate": 0.7650354998186231
+      },
+      "speedup": 2.5103222876285076,
+      "wall_time_reduction_percent": 60.164477488478326,
+      "reported_outputs_identical": true
+    },
+    {
+      "mode": "full",
+      "threads": 4,
+      "seconds": {
+        "baseline": [
+          2.398809541016817,
+          1.2901028753258288,
+          1.3466455424204469,
+          1.4098255839198828,
+          1.4781424161046743,
+          1.6667657499201596,
+          1.4794146246276796
+        ],
+        "candidate": [
+          0.767939334269613,
+          0.49609929136931896,
+          0.5418242500163615,
+          0.5820279172621667,
+          0.5136027918197215,
+          0.5199327077716589,
+          0.5952196246944368
+        ]
+      },
+      "median_seconds": {
+        "baseline": 1.4781424161046743,
+        "candidate": 0.5418242500163615
+      },
+      "speedup": 2.7280846437937005,
+      "wall_time_reduction_percent": 63.34424585120678,
+      "reported_outputs_identical": true
+    },
+    {
+      "mode": "full",
+      "threads": 8,
+      "seconds": {
+        "baseline": [
+          1.265384125057608,
+          0.9007310001179576,
+          1.7845988748595119,
+          0.8979582907631993,
+          0.8368572080507874,
+          0.8138759997673333,
+          0.8454978330992162
+        ],
+        "candidate": [
+          0.5301824999041855,
+          0.5114747919142246,
+          0.8745108330622315,
+          0.42797695798799396,
+          0.4043634170666337,
+          0.4140372909605503,
+          0.3952615410089493
+        ]
+      },
+      "median_seconds": {
+        "baseline": 0.8979582907631993,
+        "candidate": 0.42797695798799396
+      },
+      "speedup": 2.098146346440431,
+      "wall_time_reduction_percent": 52.33888228547401,
+      "reported_outputs_identical": true
+    },
+    {
+      "mode": "speed_chroma",
+      "threads": 1,
+      "seconds": {
+        "baseline": [
+          1.661612750031054,
+          1.6442282497882843,
+          1.8647145424038172,
+          2.033802750054747,
+          2.0870119160972536,
+          2.0104819582775235,
+          2.260277791880071
+        ],
+        "candidate": [
+          0.1826354581862688,
+          0.19142091693356633,
+          0.19214254198595881,
+          0.21225187508389354,
+          0.21021562488749623,
+          0.18295166594907641,
+          0.17817537486553192
+        ]
+      },
+      "median_seconds": {
+        "baseline": 2.0104819582775235,
+        "candidate": 0.19142091693356633
+      },
+      "speedup": 10.50293766472382,
+      "wall_time_reduction_percent": 90.47885427942035,
+      "reported_outputs_identical": true
+    },
+    {
+      "mode": "speed_temporal",
+      "threads": 1,
+      "seconds": {
+        "baseline": [
+          4.03162533370778,
+          3.8201170000247657,
+          4.018528375308961,
+          3.385647083632648,
+          3.3264960828237236,
+          3.595514915883541,
+          3.6299859578721225
+        ],
+        "candidate": [
+          0.4903100002557039,
+          0.5108872503042221,
+          0.40098887495696545,
+          0.631869750097394,
+          0.46156783401966095,
+          0.43157854210585356,
+          0.4034853340126574
+        ]
+      },
+      "median_seconds": {
+        "baseline": 3.6299859578721225,
+        "candidate": 0.46156783401966095
+      },
+      "speedup": 7.864469077620993,
+      "wall_time_reduction_percent": 87.28458348389233,
+      "reported_outputs_identical": true
+    }
+  ],
+  "measured_date": "2026-10-05",
+  "candidate_merged_patch_id": "3d58ff5972471be1aa5b1ff37a0f39d9e5b4e503",
+  "merged_final_revision": "b41d2340a881c69682efb08fbffd0856485c57b9",
+  "baseline_binary_sha256": "9ec01ed514b57f4b78e4d23066d3e5b930122fb86c48caedd14d7ee0d2967cfd",
+  "candidate_binary_sha256": "a75a5d623d5ffe58469b05f9415e5bf2fb0231b174562c9253729be0048b2046"
+}
