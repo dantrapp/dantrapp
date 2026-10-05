@@ -30,6 +30,14 @@ All reported JSON feature and score outputs matched in this combined benchmark. 
 
 </details>
 
+**AuthZed · SpiceDB**
+
+Reduced p95 `LookupSubjects` latency from **88.7 ms to 11.4 ms (87% lower)** and server allocation per lookup from **111.5 MB to 3.6 MB (97% lower)** in a PostgreSQL-backed Apple M4 benchmark with 5,000 wildcard exclusions and concurrent writes. Replaced repeated copying of growing exclusion lists with batched subtraction, reducing exclusion construction from quadratic to linear work while preserving conditional permissions and resource provenance.
+
+Measurements are medians across three runs of 60 requests at 10 requests/second on synthetic graphs, with dispatch caches enabled. Allocation includes concurrent writes and background work. Cached-snapshot and concrete-subject controls showed no consistent latency change. All 96 fixture documents returned the exact expected subjects.
+
+[Pull request #3395](https://github.com/authzed/spicedb/pull/3395) · [Merged commit](https://github.com/authzed/spicedb/commit/983ff476ad80c7bc3c44866c1c80b882a1bc8cbf) · [Benchmarks and reproduction](https://github.com/dantrapp/spicedb/tree/5c887488c5aae616a22204541b96a28487617e9d/benchmark-results/wildcard-lookup)
+
 **Meta · Pyrefly**
 
 Fixed workspace symbol search to include instance attributes defined inside methods, with regression tests.
