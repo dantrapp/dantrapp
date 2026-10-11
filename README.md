@@ -4,8 +4,10 @@
 
 <a href="https://www.dantrapp.com/#open-source">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/contributions/vmaf.png">
-    <img src="assets/contributions/vmaf.gif" width="480" alt="VMAF: 2.10–2.73× full-model throughput. The 2.10× illustration shows 21 frames processed in the time previously needed for 10.">
+    <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/contributions/vmaf-dark.png">
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/contributions/vmaf-light.png">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/contributions/vmaf-dark.webp">
+    <img src="assets/contributions/vmaf-light.webp" width="420" alt="VMAF: 2.10–2.73× full-model throughput. The 2.10× illustration shows 21 frames processed in the time previously needed for 10.">
   </picture>
 </a>
 
@@ -19,8 +21,10 @@ Merged PRs: [#1653](https://github.com/Netflix/vmaf/pull/1653) · [#1656](https:
 
 <a href="https://www.dantrapp.com/#open-source">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/contributions/ion.png">
-    <img src="assets/contributions/ion.gif" width="480" alt="Ion: 42% less full-read time and 52% less scan time on synthetic text records. Two parsing lanes illustrate the full-read comparison, with before normalized to 100 and after to 58.">
+    <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/contributions/ion-dark.png">
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/contributions/ion-light.png">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/contributions/ion-dark.webp">
+    <img src="assets/contributions/ion-light.webp" width="420" alt="Ion: 42% less full-read time and 52% less scan time on synthetic text records. The same record finishes parsing in 58% of the original time in this illustration.">
   </picture>
 </a>
 
@@ -32,8 +36,10 @@ Optimized Rust text parsing for whitespace, identifiers, and field names. Reduce
 
 <a href="https://www.dantrapp.com/#open-source">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/contributions/pyrefly.png">
-    <img src="assets/contributions/pyrefly.gif" width="480" alt="Pyrefly: workspace symbol search includes instance attributes. In this illustrative example, a search for name now finds the self.name assignment inside Account.__init__.">
+    <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/contributions/pyrefly-dark.png">
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/contributions/pyrefly-light.png">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/contributions/pyrefly-dark.webp">
+    <img src="assets/contributions/pyrefly-light.webp" width="420" alt="Pyrefly: workspace symbol search includes instance attributes. In this illustrative example, a search for name now finds the self.name assignment inside Account.__init__.">
   </picture>
 </a>
 
@@ -47,8 +53,10 @@ Fixed workspace symbol search to include instance attributes defined inside meth
 
 <a href="https://www.dantrapp.com/#open-source">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/contributions/spicedb.png">
-    <img src="assets/contributions/spicedb.gif" width="480" alt="SpiceDB: 87% lower p95 lookup latency and 97% less server allocation per lookup on the linked synthetic benchmark. With before normalized to 100, the after values are 13 and 3.">
+    <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/contributions/spicedb-dark.png">
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/contributions/spicedb-light.png">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/contributions/spicedb-dark.webp">
+    <img src="assets/contributions/spicedb-light.webp" width="420" alt="SpiceDB: 87% lower p95 lookup latency and 97% less server allocation per lookup on the linked synthetic benchmark. With before normalized to 100, the after values are 13 and 3.">
   </picture>
 </a>
 
